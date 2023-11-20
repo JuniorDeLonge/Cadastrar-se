@@ -2,52 +2,71 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Metadados -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e2430"> <!-- Defina a cor do navegador -->
+
+  <!-- Título da Página -->
   <title>Cadastrar-se - @juniordelonge</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/icon.png">
 </head>
 
 <body>
   <main>
+    <!-- Título Principal -->
     <h1>Criar uma nova conta</h1>
+
+    <!-- Mídia Social -->
     <div class="social-media">
       <a href="#">
-        <img src="assets/face.png" alt="Facebook" />
+        <img src="assets/xx.png" alt="X-twitter">
       </a>
       <a href="#">
-        <img src="assets/google.png" alt="Google" />
+        <img src="assets/google.png" alt="Google">
       </a>
       <a href="#">
-        <img src="assets/xx.png" alt="X-twitter" />
+        <img src="assets/face.png" alt="Facebook">
       </a>
     </div>
 
+    <!-- Alternativa de Cadastro Rápido -->
     <div class="alternative">
       <span>rápido e fácil</span>
     </div>
 
-    <form action="">
+    <!-- Formulário de Cadastro -->
+    <form id="registrationForm">
+      <!-- Campo Nome -->
       <label for="name">
         <span>Nome</span>
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name" name="name">
       </label>
 
+      <!-- Campo E-mail -->
       <label for="email">
         <span>E-mail</span>
-        <input type="email" id="email" name="email" />
+        <input type="email" id="email" name="email">
       </label>
 
+      <!-- Campo Senha -->
       <label for="password">
         <span>Password</span>
-        <input type="password" id="password" name="password" />
+        <input type="password" id="password" name="password">
+        <button type="button" id="togglePassword">Mostrar Senha</button>
       </label>
 
-      <input type="submit" value="Cadastrar" id="button" />
+      <!-- Botão de Cadastro -->
+      <input type="submit" value="Cadastrar" id="button">
     </form>
-  </main>
 
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+  </main>
 </body>
 
 </html>

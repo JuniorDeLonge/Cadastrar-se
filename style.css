@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/* Importar a fonte Poppins do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
+/* Reset de Estilos Globais */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +10,9 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Estilos do Corpo (Body) */
 body {
-    background: #1B2029;
+    background: #1e2430;
     color: white;
     font-weight: 500;
     display: flex;
@@ -19,6 +22,7 @@ body {
     justify-content: space-around;
 }
 
+/* Estilos da Seção Principal (Main) */
 main {
     width: 50vw;
     display: flex;
@@ -27,16 +31,18 @@ main {
     justify-content: center;
 }
 
+/* Estilos do Título Principal (H1) */
 main h1 {
-    color: #8880FE;
+    color: #8880fe;
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
 
-main.social-media {
+/* Estilos das Redes Sociais (Social Media) */
+main .social-media {
     display: flex;
-    align-content: center;
+    align-items: center;
 }
 
 main .social-media a {
@@ -44,28 +50,32 @@ main .social-media a {
 }
 
 main .social-media img {
-    width: 34px;
-    margin-left: 1rem;
+    width: 35px;
+    height: 35px;
+    margin-left: 0.8rem;
+    border-radius: 50%; /* Alterado para 50% para criar bordas redondas */
 }
 
 main .social-media a:first-child img {
     margin-left: 0;
 }
 
+/* Estilos da Alternativa de Cadastro (Alternative) */
 main .alternative {
-    margin-top: .8rem;
+    margin-top: 0.8rem;
 }
 
 main .alternative span {
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.3);
     position: relative;
 }
 
-main .alternative span::before, main .alternative span::after {
+main .alternative span::before,
+main .alternative span::after {
     position: absolute;
-    content: '';
+    content: "";
     height: 1px;
     width: 81px;
     bottom: 50%;
@@ -77,6 +87,7 @@ main .alternative span::after {
     left: 100px;
 }
 
+/* Estilos do Formulário de Cadastro (Form) */
 main form {
     display: flex;
     flex-direction: column;
@@ -89,7 +100,7 @@ main form label {
 }
 
 main form label span {
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-top: 1rem;
 }
 
@@ -102,47 +113,62 @@ main form input {
     outline: none;
     color: rgba(166, 166, 166);
     font-size: 1rem;
-    border: 1px solid #040B18;
+    border: 1px solid #1a1f2a;
     border-radius: 8px;
+    transition:
+        border 0.3s ease-in-out,
+        background 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+main form input:hover {
+    border: 1px solid #6c63ff;
+    background: #1a1f2a;
+    color: #6c63ff;
+}
+
+main form input:focus {
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.7);
 }
 
 main form input[type="submit"] {
     cursor: pointer;
     width: 50%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     border: none;
     border-radius: 15px;
-    background: #6C63FF;
+    background: #6c63ff;
     color: white;
     font-size: 1rem;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 main form input[type="submit"]:hover {
     background: #5952d4;
 }
 
-@media only screen and (max-width: 900px) {
-    section.images {
-        display: none;
-        visibility: hidden;
-    }
-
-    main {
-        width: 100vw;
-    }
+/* Estilos para o botão de mostrar senha */
+main form label #togglePassword {
+    background: transparent;
+    border: none;
+    color: #787f8f;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.9rem;
+    transition:
+        color 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 600px) {
-    main h1 {
-        font-size: 1.8rem;
-    }
+main form label #togglePassword:hover {
+    color: #6c63ff;
+    transform: scale(1.1);
+}
 
-    main .alternative span {
-        font-size: .9rem;
-    }
+main form label #password:hover {
+    border: 1px solid #6c63ff;
+}
 
-    main form label span, main form input[type="submit"] {
-        font-size: 1rem;
-    }
+main form label #password {
+    transition: border 0.3s ease-in-out;
 }
